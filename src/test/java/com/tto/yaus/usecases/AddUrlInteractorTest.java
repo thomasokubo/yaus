@@ -1,6 +1,9 @@
-package com.tto.yaus.usecases.addurl;
+package com.tto.yaus.usecases;
 
 import com.tto.yaus.gateways.UrlGateway;
+import com.tto.yaus.usecases.addurl.AddUrlInputPort;
+import com.tto.yaus.usecases.addurl.AddUrlInteractor;
+import com.tto.yaus.usecases.addurl.AddUrlOutputPort;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
