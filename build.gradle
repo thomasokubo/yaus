@@ -1,21 +1,27 @@
 plugins {
-	id 'org.springframework.boot' version '2.5.6'
-	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
-group = 'com.tto'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+allprojects {
+	apply plugin: 'java'
+	apply plugin: 'idea'
+	apply plugin: 'eclipse'
 
-repositories {
-	mavenCentral()
-}
+	group = 'com.tto'
+	version = '0.0.1-SNAPSHOT'
+	sourceCompatibility = '11'
 
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+		testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+		testImplementation "org.mockito:mockito-core:3.9.0"
+		testImplementation "org.mockito:mockito-junit-jupiter:3.9.0"
+		testImplementation group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+	}
 }
 
 test {
