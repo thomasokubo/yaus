@@ -1,2 +1,4 @@
 rootProject.name = 'yaus'
 include 'api'
+include 'core'
+
